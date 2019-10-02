@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
     <div id="nav">
       <Header />
     </div> 
