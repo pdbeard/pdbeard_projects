@@ -3,7 +3,7 @@
     <div class="tile is-parent">
         
             <article class="tile is-child notification is-info">
-                <router-link :to="{name: 'details', params:{projectId: project.id}}" tag="p">{{project.title}} </router-link>
+                <router-link :to="{name: 'details', params:{project: project}}" tag="p">{{project.title}} </router-link>
                 <p class="subtitle">With an image</p>
                 <figure class="image is-4by3">
                 <img src="https://images.unsplash.com/photo-1569817480337-01a8b22cd8d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80">
