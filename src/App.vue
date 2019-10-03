@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container">
+  <div id="app" class="container has-navbar-fixed-top">
     <meta http-equiv="X-UA-Compatible" content="IE=9">
     <div id="nav">
       <Header />

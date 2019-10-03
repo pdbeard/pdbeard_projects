@@ -37,7 +37,7 @@ export default {
     }
   },
   created(){
-    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=7')
+    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=16')
       .then(res => this.projects = res.data)
       .catch(err => console.log(err));
 
