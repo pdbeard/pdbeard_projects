@@ -1,5 +1,5 @@
 <template>
-  <div id="Home" class ="container">
+  <div class ="container">
     <Projects v-bind:projects="projects"/>
  </div>
 </template>
@@ -37,7 +37,7 @@ export default {
     }
   },
   created(){
-    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=16')
+    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=9')
       .then(res => this.projects = res.data)
       .catch(err => console.log(err));
 
@@ -47,31 +47,4 @@ export default {
 </script>
 
 <style>
-#home{
-background-color: black;
-}
- 
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.4;
-}
-
-.btn {
-  display: inline-block;
-  border: none;
-  background: #555;
-  color: #ffffff;
-  padding: 7px 20px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background: #666;
-} */
 </style>

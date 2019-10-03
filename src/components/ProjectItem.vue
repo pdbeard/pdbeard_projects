@@ -8,17 +8,9 @@
                 </figure>
                 <h1 class="title title-font" v-if="project.title.length < 21"><span>{{project.title}}</span></h1>
                 <h1 class="title title-font" v-else><span>{{project.title.substring(0,18)+"..."}}</span></h1> 
-                <!-- <p class="subtitle title-font">With an image</p> -->
-            
             </article>
         </div>
     </router-link>
-    <!-- <div  v-bind:class="{'is-complete':project.completed}" >
-        <input type="checkbox" v-on:change="markComplete">
-        <div class="title">{{project.title}}</div>
-        <p>HELLO PRIOJECTSS!!</p>
-        <button @click="$emit('del-project', project.id)" class="del">x</button>
-    </div> -->
 </div>
 </template>
 
@@ -29,12 +21,7 @@ export default {
     comments:{
         Details
     },
-    props:["project"],
-    methods:{
-        markComplete(){
-            this.project.completed = !this.project.completed;
-        }
-    }
+    props:["project"]
 }
 </script>
 
@@ -102,22 +89,5 @@ export default {
         padding: 10px;
         border-bottom: 1px #ccc dotted;
     } */
-
-    .is-complete {
-        text-decoration: line-through;
-    }
-    
-    .del {
-        background: #ff0000;
-        color: #fff;
-        border: none;
-        padding: 5px 9px;
-        border-radius: 50%;
-        cursor: position;
-        float: right;   
-    }
-    .add-styles{
-        padding:20px;
-    }
 
 </style>
