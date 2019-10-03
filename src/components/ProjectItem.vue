@@ -3,12 +3,13 @@
     <router-link :to="{name: 'details', params:{project: project}}" tag="div">   
         <div class="tile is-parent project-tile">
             <article class="tile is-child ">
-                <h1 class="title font-trans" v-if="project.title.length < 21">{{project.title}}</h1>
-                <h1 class="title font-trans" v-else>{{project.title.substring(0,18)+"..."}}</h1> 
-                <p class="subtitle font-trans">With an image</p>
-                <figure class="image is-4by3">
-                <img class="img-grey" src="https://images.unsplash.com/photo-1569817480337-01a8b22cd8d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80">
+                <figure class="image is-4by3 ">    
+                    <img class="img-grey" src="https://images.unsplash.com/photo-1569817480337-01a8b22cd8d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80">
                 </figure>
+                <h1 class="title title-font" v-if="project.title.length < 21"><span>{{project.title}}</span></h1>
+                <h1 class="title title-font" v-else><span>{{project.title.substring(0,18)+"..."}}</span></h1> 
+                <!-- <p class="subtitle title-font">With an image</p> -->
+            
             </article>
         </div>
     </router-link>
@@ -39,20 +40,31 @@ export default {
 
 <style scoped>
     .project-tile{
+        position: relative;
+        width:100%;
         background-color:#fff;
         transition: background-color .3s;
     }
-    .project-tile:hover{
+    /* .project-tile:hover{
         background-color:#333;
         transition: background-color .3s;
-    }
-    .font-trans{
-        color:black;
-    }
-    .font-trans:hover{
+    } */
+    .title-font{
+        position: absolute;
+        top: 80%; 
+        left: 0; 
+        width: 100%; 
         color:white;
-        transition: color .3s;
     }
+    
+    .title-font span { 
+        color: white; 
+        font: bold 24px/45px Helvetica, Sans-Serif; 
+        letter-spacing: -1px;  
+        background: rgb(0, 0, 0); /* fallback color */
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px; 
+    }  
     .img-grey{
         filter: grayscale(100%);
         -moz-filter: grayscale(100%);
@@ -61,6 +73,12 @@ export default {
         filter: gray; /* IE6-9 */
         -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
         transition: filter .3s;
+
+        border-radius:2%;
+
+        -webkit-box-shadow: 0 10px 6px -6px #777;
+        -moz-box-shadow: 0 10px 6px -6px #777;
+        box-shadow: 0 10px 6px -6px #777;
     }
     .img-grey:hover{
         filter: grayscale(0%);
@@ -79,11 +97,11 @@ export default {
         text-overflow: ellipsis;
     } */
 
-    .project-item { 
+    /* .project-item { 
         background: #f4f4f4;
         padding: 10px;
         border-bottom: 1px #ccc dotted;
-    }
+    } */
 
     .is-complete {
         text-decoration: line-through;

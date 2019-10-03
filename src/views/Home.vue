@@ -1,21 +1,17 @@
 <template>
   <div id="Home" class ="container">
-    <!-- <Header /> -->
-    <AddProject v-on:add-project="addProject"/>
-    <Projects v-bind:projects="projects" v-on:del-project="deleteProject"/>
+    <Projects v-bind:projects="projects"/>
  </div>
 </template>
 
 <script>
 import Projects from '../components/Projects';
-import AddProject from '../components/AddProject';
 import axios from 'axios';
 
 export default {
   name: 'Home',
   components: {
-    Projects,
-    AddProject
+    Projects
   },
   data() {
     return{
