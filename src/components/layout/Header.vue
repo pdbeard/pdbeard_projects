@@ -12,10 +12,10 @@
   <div id="navMenu" class="navbar-menu" :class="{ 'is-active': showNav }">
     <div class="navbar-start tabs is-fullwidth">
         <ul>
-            <li >
-                <router-link class="is-active" to="/" tag="a">Projects</router-link>     
+            <li @click="showNav=!showNav">
+                <router-link class="" to="/" tag="a">Projects</router-link>     
             </li>
-            <li> 
+            <li @click="showNav=!showNav"> 
                 <router-link class="" to="/about" tag ="a">About</router-link>
             </li>
         </ul>
