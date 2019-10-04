@@ -1,15 +1,17 @@
 <template>
   <div id="app" class="container has-navbar-fixed-top">
     <meta http-equiv="X-UA-Compatible" content="IE=9">
-    <div id="nav">
+    <div class="" >
       <Header />
     </div> 
-      <transition
-        name="fade"
-        mode="out-in"
-      >
-      <router-view/>
-    </transition>
+    <div class="nav-fix">
+        <transition
+          name="fade"
+          mode="out-in"
+        >
+          <router-view/>
+        </transition>
+    </div>
  </div>
 </template>
 
@@ -35,5 +37,8 @@ export default {
 .fade-enter,
 .fade-leave-active {
   opacity: 0
+}
+.nav-fix{
+  padding-top:5%;
 }
 </style>
