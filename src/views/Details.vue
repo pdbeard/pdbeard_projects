@@ -2,7 +2,8 @@
 <div class ="container" >
    <div class=" columns padding">
       <div class = "column">
-         <img src="../assets/project.jpg"> 
+            <img class="img-grey" v-if="project.id % 2 == 0" src="../assets/project.jpg">
+            <img class="img-grey" v-else src="../assets/project2.jpg">
       </div>
       <section class="column">
          <a class="button" @click="$router.go(-1)">
