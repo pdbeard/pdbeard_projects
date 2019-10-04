@@ -39,6 +39,6 @@ export default {
   opacity: 0
 }
 .nav-fix{
-  padding-top:5%;
+  padding-top:6%;
 }
 </style>

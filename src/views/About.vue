@@ -4,13 +4,11 @@
         <div class = "column">
           <img src="../assets/me2.jpg"> 
         </div>
-        <section class="section column">
-          <div class="container">
+        <section class="column">
             <h1 class="title">About</h1>
             <h2 class="subtitle">
-              A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+              Personal page of <strong>Patrick Beard</strong>. Currently highlighting past projects.
             </h2>
-          </div>
         </section>
     </div>
   </div>

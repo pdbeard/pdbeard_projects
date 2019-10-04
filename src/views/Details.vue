@@ -1,13 +1,11 @@
 <template>
 <div class ="container" >
    <div class=" columns padding">
-
-
       <div class = "column">
-            <img src="https://images.unsplash.com/photo-1569817480337-01a8b22cd8d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"> 
+         <img src="../assets/project.jpg"> 
       </div>
       <section class="column">
-         <a class="button is-medium" @click="$router.go(-1)">
+         <a class="button" @click="$router.go(-1)">
             <!-- <span class="icon">
                <i class="fab fa-github"></i>
             </span> -->
@@ -18,9 +16,7 @@
             <h2 class="subtitle">
                A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
             </h2>
-         </div>
-
-               
+         </div>    
       </section>
    </div>
 </div>

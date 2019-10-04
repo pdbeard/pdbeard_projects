@@ -3,11 +3,12 @@
     <router-link :to="{name: 'details', params:{project: project}}" tag="div">   
         <div class="tile is-parent project-tile">
             <article class="tile is-child ">
-                <figure class="image is-4by3 ">    
-                    <img class="img-grey" src="https://images.unsplash.com/photo-1569817480337-01a8b22cd8d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80">
+                <figure class="image is-2by1 ">    
+                    <img class="img-grey" v-if="project.id % 2 == 0" src="../assets/project.jpg">
+                    <img class="img-grey" v-else src="../assets/project2.jpg">
                 </figure>
-                <h1 class="title title-font" v-if="project.title.length < 21"><span>{{project.title}}</span></h1>
-                <h1 class="title title-font" v-else><span>{{project.title.substring(0,18)+"..."}}</span></h1> 
+                <h1 class="title title-font" v-if="project.title.length < 32"><span>{{project.title}}</span></h1>
+                <h1 class="title title-font" v-else><span>{{project.title.substring(0,32)+"..."}}</span></h1> 
             </article>
         </div>
     </router-link>
@@ -21,7 +22,13 @@ export default {
     comments:{
         Details
     },
-    props:["project"]
+    props:["project"],
+    data() {
+        return{
+            project_image1 :'../assets/project.jpg',
+            project_image2 : '../assets/project2.jpg'
+        }
+    }
 }
 </script>
 
