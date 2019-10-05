@@ -39,6 +39,12 @@ export default {
   opacity: 0
 }
 .nav-fix{
-  padding-top:6%;
+  padding-top:5%;
 }
+ @media screen 
+  and (max-width : 1023px) {
+    .nav-fix{
+      padding-top:10%;
+    }
+  }
 </style>
