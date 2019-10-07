@@ -2,8 +2,10 @@
 <div class ="container" >
    <div class=" columns padding">
       <div class = "column">
-            <img class="img-grey" v-if="project.id % 2 == 0" src="../assets/project.jpg">
-            <img class="img-grey" v-else src="../assets/project2.jpg">
+            <img class="img-grey" v-bind:src="require('../assets/images/'+project.img)" v-bind:alt="project.img">
+            <div class="tags">
+               <span class="tag" v-bind:key="tech" v-for="tech in project.tech">{{tech}}</span>
+            </div>
       </div>
       <section class="column">
          <a class="button" @click="$router.go(-1)">
@@ -14,9 +16,8 @@
          </a>
          <div>
             <h1 class="title">{{project.title}}</h1>
-            <h2 class="subtitle">
-               A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-            </h2>
+            <p v-html="project.desc"></p>
+            <!-- <a :href="project.url" target="_blank">See the Project</a> -->
          </div>    
       </section>
    </div>
@@ -41,5 +42,8 @@
    }
    img{
       border-radius:2%;
+      -webkit-box-shadow: 0 10px 6px -6px #777;
+      -moz-box-shadow: 0 10px 6px -6px #777;
+      box-shadow: 0 10px 6px -6px #777;
    }
 </style>
