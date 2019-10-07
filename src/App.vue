@@ -5,6 +5,10 @@
       <Header />
     </div> 
     <div class="nav-fix">
+      <div class="notification is-info" :class="{ 'remove-warning': !showWarning }">
+        <button @click="showWarning = !showWarning"  class="delete"></button>
+          This website is currently being developed. Projects and descriptions are being added and under review.
+      </div>
         <transition
           name="fade"
           mode="out-in"
@@ -19,14 +23,24 @@
 import 'bulma/css/bulma.css';
 import Header from './components/layout/Header';
 export default {
-  name: 'app',
-  components: {
-    Header
+    name: 'app',
+    components: {
+      Header
+    },
+    data() {
+      return{
+          showWarning:true
+      } 
   }
 }
 </script>
 
 <style>
+.notification{
+}
+.remove-warning{
+  display:none;
+}
 .fade-enter-active,
 .fade-leave-active {
   transition-duration: 0.3s;
