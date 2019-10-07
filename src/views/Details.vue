@@ -2,22 +2,19 @@
 <div class ="container" >
    <div class=" columns padding">
       <div class = "column">
-            <img class="img-grey" v-bind:src="require('../assets/images/'+project.img)" v-bind:alt="project.img">
-            <div class="tags">
-               <span class="tag" v-bind:key="tech" v-for="tech in project.tech">{{tech}}</span>
-            </div>
+         <img class="img-grey" v-bind:src="require('../assets/images/'+project.img)" v-bind:alt="project.img">
+         <div class="tags">
+            <span class="tag" v-bind:key="tech" v-for="tech in project.tech">{{tech}}</span>
+         </div>
       </div>
       <section class="column">
          <a class="button" @click="$router.go(-1)">
-            <!-- <span class="icon">
-               <i class="fab fa-github"></i>
-            </span> -->
             <span>Back</span>
-         </a>
+         </a></br></br>
          <div>
             <h1 class="title">{{project.title}}</h1>
-            <p v-html="project.desc"></p>
-            <!-- <a :href="project.url" target="_blank">See the Project</a> -->
+            <p v-html="project.desc"></p></br>
+            <a :href="project.url" target="_blank">See the Project</a>
          </div>    
       </section>
    </div>

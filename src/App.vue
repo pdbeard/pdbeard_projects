@@ -7,7 +7,7 @@
     <div class="nav-fix">
       <div class="notification is-info" :class="{ 'remove-warning': !showWarning }">
         <button @click="showWarning = !showWarning"  class="delete"></button>
-          This website is currently being developed. Projects and descriptions are being added and under review.
+          This website is currently being developed. Project's and Functionality are still being added.
       </div>
         <transition
           name="fade"
