@@ -7,7 +7,7 @@
                     <clazy-load v-bind:src="require('../assets/images/'+project.img)">   
                         <img class="img-grey" v-bind:src="require('../assets/images/'+project.img)">
                         <div class="preloader" slot="placeholder">
-                            <img src="../assets/loading.svg" alt="loading...">
+                            <img style="height:200px" src="../assets/loading.svg" alt="loading...">
                         </div>
                     </clazy-load>
                 </figure>
@@ -41,14 +41,13 @@ export default {
         background-color:#333;
         transition: background-color .3s;
     } */
-    .title-font{
+    .title-font {
         position: absolute;
         top: 80%; 
         left: 0; 
         width: 100%; 
         color:white;
     }
-    
     .title-font span { 
         color: white; 
         font: bold 24px/45px Helvetica, Sans-Serif; 
