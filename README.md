@@ -1,5 +1,5 @@
 # Pdbeard Projects page
-
+Website highlighting projects. 
 ## Project setup
 ```
 npm install

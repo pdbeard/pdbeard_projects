@@ -3,8 +3,13 @@
     <router-link :to="{name: 'details', params:{project: project}}" tag="div">   
         <div class="tile is-parent project-tile">
             <article class="tile is-child ">
-                <figure class="image is-2by1 ">    
-                    <img class="img-grey" v-bind:src="require('../assets/images/'+project.img)">
+                <figure class="image is-2by1 "> 
+                    <clazy-load v-bind:src="require('../assets/images/'+project.img)">   
+                        <img class="img-grey" v-bind:src="require('../assets/images/'+project.img)">
+                        <div class="preloader" slot="placeholder">
+                            <img src="../assets/loading.svg" alt="loading...">
+                        </div>
+                    </clazy-load>
                 </figure>
                 <h1 class="title title-font" v-if="project.title.length < 35"><span>{{project.title}}</span></h1>
                 <h1 class="title title-font" v-else><span>{{project.title.substring(0,35)+"..."}}</span></h1> 
