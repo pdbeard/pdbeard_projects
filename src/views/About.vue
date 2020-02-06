@@ -36,7 +36,7 @@
             <h2 class="subtitle">
               Personal page of <strong>Patrick Beard</strong>. <P>Currently highlighting past projects.</p>
             </h2>
-            <p>This site was created using<a href="vuejs.org">Vue.JS</a> and <a href="https://bulma.io/">Bulma</a></p></br>
+            <p>This site was created using <a href="vuejs.org">Vue.JS</a> and <a href="https://bulma.io/">Bulma</a></p></br>
             <p>Most of the code for these projects can be found on my </p> <a href="https://github.com/pdbeard">Github.</a> Including the code for this page. 
         </section>
     </div>
