@@ -10,10 +10,10 @@
       <section class="column">
          <a class="button" @click="$router.go(-1)">
             <span>Back</span>
-         </a></br></br>
+         </a><br /> <br />
          <div>
             <h1 class="title">{{project.title}}</h1>
-            <p v-html="project.desc"></p></br>
+            <p v-html="project.desc"></p><br />
             <a :href="project.url" target="_blank">See the Project</a>
          </div>    
       </section>

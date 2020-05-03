@@ -5,10 +5,10 @@
       <Header />
     </div> 
     <div class="nav-fix">
-      <div class="notification is-info" :class="{ 'remove-warning': !showWarning }">
+      <!-- <div class="notification is-info" :class="{ 'remove-warning': !showWarning }">
         <button @click="showWarning = !showWarning"  class="delete"></button>
           This website is currently being developed. Project's and Functionality are still being added.
-      </div>
+      </div> -->
         <transition
           name="fade"
           mode="out-in"
