@@ -16,7 +16,8 @@
                 <router-link class="" to="/" tag="a">Projects</router-link>     
             </li>
             <li @click="showNav=!showNav"> 
-                <router-link class="" to="/about" tag ="a">About</router-link>
+                <!-- <router-link class="" to="/about" tag ="a">About</router-link> -->
+                <a href="https://github.com/pdbeard" target="_blank">GitHub</a>
             </li>
         </ul>
     </div>
